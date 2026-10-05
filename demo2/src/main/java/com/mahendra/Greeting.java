@@ -1,5 +1,6 @@
 package com.mahendra;
-
+import org.springframework.stereotype.Component;
+@Component
 public class Greeting{
 
     private SPLogger log;

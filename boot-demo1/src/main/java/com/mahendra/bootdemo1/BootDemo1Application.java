@@ -9,7 +9,10 @@ import org.springframework.boot.CommandLineRunner;
 public class BootDemo1Application implements CommandLineRunner {
 
 	@Autowired	
-	private Greeting greeting;
+	private Greeting greeting1;
+
+	@Autowired
+	private Greeting greeting2;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BootDemo1Application.class, args);
@@ -19,7 +22,9 @@ public class BootDemo1Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		// Start using Injected Beans .....
-		greeting.sayHello("World");
+		greeting1.sayHello("World");
+
+		System.out.println(greeting1.hashCode()+"---"+greeting2.hashCode());
 	}
 
 }
