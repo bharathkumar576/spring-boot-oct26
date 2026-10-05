@@ -1,0 +1,20 @@
+package com.mahendra.bootdemo1;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+
+    private EmailService emailService;
+
+    // Injected via setter method using @Autowired
+    @Autowired
+    public void setEmailService(EmailService emailService) {
+        this.emailService = emailService;
+    }
+
+    public void notifyUser() {
+        emailService.sendEmail();
+    }
+}
