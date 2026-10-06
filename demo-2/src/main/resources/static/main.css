@@ -1,0 +1,15 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 4px double #000;
+    background-color: cadetblue;
+}
+p {
+    padding: 10px;
+    background-color: lightgray;
+}
