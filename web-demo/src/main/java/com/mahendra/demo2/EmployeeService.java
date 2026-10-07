@@ -42,10 +42,19 @@ public class EmployeeService {
 		oldEmp.setDesignation(empUpdate.getDesignation());
 		oldEmp.setFirstName(empUpdate.getFirstName());
 		oldEmp.setLastName(empUpdate.getLastName());
-		return "Employee record updated";
+		return "Employee updated !";
+		
 		}catch(RuntimeException ex) {
 			return ex.getMessage();
 		}
+	}
+	
+	
+	public void delete(Integer id) {
+		
+		Employee oldEmp = getById(id);
+		employees.remove(oldEmp);
+		
 	}
 	
 	
