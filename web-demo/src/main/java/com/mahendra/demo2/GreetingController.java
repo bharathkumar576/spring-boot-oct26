@@ -16,7 +16,7 @@ public class GreetingController {
 	 * "<msg>Hello World</msg>"; }
 	 */
 	
-	@GetMapping(produces= {"application/xml", "application/json" })
+	@GetMapping(produces= { "application/json", "application/xml" })
 	public Message sayHello() {
 		return new Message("Hello World");
 	}
