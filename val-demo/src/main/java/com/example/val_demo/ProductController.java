@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/api/products")
 public class ProductController {
     
+    @GetMapping
     public List<Product> getAllProducts() {
         // This is just a placeholder. You would typically fetch this from a database.
         return Arrays.asList(

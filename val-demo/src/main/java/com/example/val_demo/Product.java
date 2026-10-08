@@ -7,7 +7,7 @@ import jakarta.validation.constraints.Positive;
 public class Product {
 
     @NotNull(message = "Product ID cannot be null") 
-    private int productId;
+    private Integer productId;
 
     @NotEmpty(message = "Product name cannot be empty")
     private String name;
@@ -17,11 +17,11 @@ public class Product {
     @Positive(message = "Price must be positive") 
     private double price;
 
-    public int getProductId() {
+    public Integer getProductId() {
         return productId;
     }
 
-    public void setProductId(int productId) {
+    public void setProductId(Integer productId) {
         this.productId = productId;
     }
 
@@ -51,7 +51,7 @@ public class Product {
 
     public Product() {
     }
-    public Product(int productId, String name, String description, double price) {
+    public Product(Integer productId, String name, String description, double price) {
         this.productId = productId;
         this.name = name;
         this.description = description;
