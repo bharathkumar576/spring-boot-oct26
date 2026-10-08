@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Positive;
 
 public class Product {
 
-    @NotNull(message = "Product ID cannot be null") 
+    @ValidId 
     private Integer productId;
 
     @NotEmpty(message = "Product name cannot be empty")
