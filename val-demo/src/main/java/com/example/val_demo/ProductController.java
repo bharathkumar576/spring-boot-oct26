@@ -2,6 +2,7 @@ package com.example.val_demo;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import jakarta.validation.Valid;
 
@@ -11,13 +12,18 @@ import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
-
 
 @RestController 
 @RequestMapping("/api/products")
 public class ProductController {
+
+    @GetMapping("/{id}")
+    public Product getProductById(@PathVariable("id") Integer id) {
+        if(id > 1 && id <5){
+            return new Product(id, "Product " + id, "Description " + id, id * 10.0);
+        }
+        throw new ProductNotFoundException("Product not found with id: " + id);
+    }
     
     @GetMapping
     public List<Product> getAllProducts() {
